@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduShare - Chia sẻ kiến thức học tập</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">EduShare</a>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Tìm kiếm...">
+            </div>
+            <div class="user-menu">
+                <button class="icon-button">✚</button>
+                <div class="profile-pic">T</div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="category-nav">
+                <div class="nav-title">Chủ đề học tập</div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <span class="nav-icon">🏠</span>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🔬</span>
+                            <span>Khoa học tự nhiên</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">👥</span>
+                            <span>Khoa học xã hội</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🧮</span>
+                            <span>Toán học</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">⚛️</span>
+                            <span>Vật lý học</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🧪</span>
+                            <span>Hóa học</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🧬</span>
+                            <span>Sinh học</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">💻</span>
+                            <span>Công nghệ thông tin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-icon">🗣️</span>
+                            <span>Ngôn ngữ học</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Topic Filters -->
+            <div class="topic-filters">
+                <div class="topic-filter active">Tất cả</div>
+                <div class="topic-filter">Khoa học tự nhiên</div>
+                <div class="topic-filter">Toán học</div>
+                <div class="topic-filter">Vật lý</div>
+                <div class="topic-filter">Sinh học</div>
+                <div class="topic-filter">Công nghệ thông tin</div>
+                <div class="topic-filter">Ngôn ngữ học</div>
+            </div>
+            
+            <!-- Create Post -->
+            <div class="create-post">
+                <div class="create-post-header">
+                    <div class="profile-pic">T</div>
+                    <div class="create-post-input">Chia sẻ kiến thức của bạn...</div>
+                </div>
+                
+                <!-- Would be expanded via JavaScript -->
+                <div class="expanded-post">
+                    <textarea class="post-input" placeholder="Chia sẻ kiến thức của bạn..."></textarea>
+                    <div class="post-categories">
+                        <div class="category-tag">Khoa học tự nhiên</div>
+                        <div class="category-tag active">Toán học</div>
+                        <div class="category-tag">Vật lý học</div>
+                        <div class="category-tag">Công nghệ thông tin</div>
+                    </div>
+                    <div class="post-actions">
+                        <button class="post-button">Đăng bài</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Posts -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="profile-pic">N</div>
+                    <div class="post-info">
+                        <div class="post-author">Nguyễn Văn A</div>
+                        <div class="post-meta">
+                            <span>3 giờ trước</span>
+                            <span class="post-category">• Toán học</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Hôm nay tôi muốn chia sẻ về một phương pháp giải phương trình bậc hai mà ít người biết đến. Phương pháp này đặc biệt hiệu quả khi hệ số của x² rất lớn...</p>
+                    <p>Xét phương trình: ax² + bx + c = 0</p>
+                    <p>Thay vì sử dụng công thức delta thông thường, chúng ta có thể áp dụng...</p>
+                </div>
+                <img src="/api/placeholder/600/300" alt="placeholder" class="post-image">
+                <div class="post-actions-buttons">
+                    <button class="action-button">
+                        <span class="icon">♡</span>
+                        <span class="action-text">42</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">💬</span>
+                        <span class="action-text">15</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">↪</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="post">
+                <div class="post-header">
+                    <div class="profile-pic">H</div>
+                    <div class="post-info">
+                        <div class="post-author">Hoàng Thị B</div>
+                        <div class="post-meta">
+                            <span>1 ngày trước</span>
+                            <span class="post-category">• Khoa học tự nhiên</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Các bạn có biết tại sao lá cây có màu xanh không? Hiện tượng này liên quan đến sự hấp thụ ánh sáng của chất diệp lục...</p>
+                    <p>Quá trình quang hợp giúp thực vật tạo ra năng lượng từ ánh sáng mặt trời. Chlorophyll có khả năng hấp thụ ánh sáng màu đỏ và xanh lam, nhưng phản xạ ánh sáng màu xanh lá...</p>
+                </div>
+                <div class="post-actions-buttons">
+                    <button class="action-button">
+                        <span class="icon">♡</span>
+                        <span class="action-text">78</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">💬</span>
+                        <span class="action-text">23</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">↪</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="post">
+                <div class="post-header">
+                    <div class="profile-pic">T</div>
+                    <div class="post-info">
+                        <div class="post-author">Trần Văn C</div>
+                        <div class="post-meta">
+                            <span>2 ngày trước</span>
+                            <span class="post-category">• Ngôn ngữ học</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Bạn có biết tiếng Việt thuộc nhóm ngôn ngữ nào không? Tiếng Việt thuộc họ ngôn ngữ Nam Á, nhóm Việt-Mường...</p>
+                    <p>Tiếng Việt có 6 thanh điệu: ngang, huyền, hỏi, ngã, sắc và nặng. Đây là một đặc điểm quan trọng tạo nên sự phong phú của ngôn ngữ...</p>
+                </div>
+                <img src="/api/placeholder/600/300" alt="placeholder" class="post-image">
+                <div class="post-actions-buttons">
+                    <button class="action-button">
+                        <span class="icon">♡</span>
+                        <span class="action-text">54</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">💬</span>
+                        <span class="action-text">31</span>
+                    </button>
+                    <button class="action-button">
+                        <span class="icon">↪</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <!-- Trending Topics -->
+            <div class="trending-topics">
+                <div class="sidebar-title">Chủ đề nổi bật</div>
+                <div class="trending-topic">
+                    <div class="topic-icon">🧮</div>
+                    <div class="topic-name">
+                        <div class="topic-title">Định lý Fermat</div>
+                        <div class="topic-category">Toán học</div>
+                    </div>
+                </div>
+                <div class="trending-topic">
+                    <div class="topic-icon">🔬</div>
+                    <div class="topic-name">
+                        <div class="topic-title">Khủng hoảng khí hậu</div>
+                        <div class="topic-category">Khoa học tự nhiên</div>
+                    </div>
+                </div>
+                <div class="trending-topic">
+                    <div class="topic-icon">💻</div>
+                    <div class="topic-name">
+                        <div class="topic-title">AI trong giáo dục</div>
+                        <div class="topic-category">Công nghệ thông tin</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Suggested Users 
+            <div class="suggested-users">
+                <div class="sidebar-title">Người dùng gợi ý</div>
+                <div class="suggested-user">
+                    <div class="user-icon">P</div>
+                    <div class="user-name">
+                        <div class="user-fullname">Phạm Văn D</div>
+                        <div class="user-role">Vật lý lượng tử</div>
+                    </div>
+                    <button class="follow-button">Theo dõi</button>
+                </div>
+                <div class="suggested-user">
+                    <div class="user-icon">L</div>
+                    <div class="user-name">
+                        <div class="user-fullname">Lê Thị E</div>
+                        <div class="user-role">Hóa học hữu cơ</div>
+                    </div>
+                    <button class="follow-button">Theo dõi</button>
+                </div>
+                <div class="suggested-user">
+                    <div class="user-icon">V</div>
+                    <div class="user-name">
+                        <div class="user-fullname">Vũ Đình F</div>
+                        <div class="user-role">Lịch sử Việt Nam</div>
+                    </div>
+                    <button class="follow-button">Theo dõi</button>
+                </div>
+            </div>  -->
+        </div>
+    </div>
+</body>
+</html>
