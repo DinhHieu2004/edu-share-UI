@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduShare - Chia sẻ kiến thức học tập</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
 </head>
 <body>
@@ -122,99 +124,10 @@
             </div>
             
             <!-- Posts -->
-            <div class="post">
-                <div class="post-header">
-                    <div class="profile-pic">N</div>
-                    <div class="post-info">
-                        <div class="post-author">Nguyễn Văn A</div>
-                        <div class="post-meta">
-                            <span>3 giờ trước</span>
-                            <span class="post-category">• Toán học</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <p>Hôm nay tôi muốn chia sẻ về một phương pháp giải phương trình bậc hai mà ít người biết đến. Phương pháp này đặc biệt hiệu quả khi hệ số của x² rất lớn...</p>
-                    <p>Xét phương trình: ax² + bx + c = 0</p>
-                    <p>Thay vì sử dụng công thức delta thông thường, chúng ta có thể áp dụng...</p>
-                </div>
-                <img src="/api/placeholder/600/300" alt="placeholder" class="post-image">
-                <div class="post-actions-buttons">
-                    <button class="action-button">
-                        <span class="icon">♡</span>
-                        <span class="action-text">42</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">💬</span>
-                        <span class="action-text">15</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">↪</span>
-                    </button>
-                </div>
-            </div>
+            <div id="timeline-container"></div>
+               
             
-            <div class="post">
-                <div class="post-header">
-                    <div class="profile-pic">H</div>
-                    <div class="post-info">
-                        <div class="post-author">Hoàng Thị B</div>
-                        <div class="post-meta">
-                            <span>1 ngày trước</span>
-                            <span class="post-category">• Khoa học tự nhiên</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <p>Các bạn có biết tại sao lá cây có màu xanh không? Hiện tượng này liên quan đến sự hấp thụ ánh sáng của chất diệp lục...</p>
-                    <p>Quá trình quang hợp giúp thực vật tạo ra năng lượng từ ánh sáng mặt trời. Chlorophyll có khả năng hấp thụ ánh sáng màu đỏ và xanh lam, nhưng phản xạ ánh sáng màu xanh lá...</p>
-                </div>
-                <div class="post-actions-buttons">
-                    <button class="action-button">
-                        <span class="icon">♡</span>
-                        <span class="action-text">78</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">💬</span>
-                        <span class="action-text">23</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">↪</span>
-                    </button>
-                </div>
-            </div>
             
-            <div class="post">
-                <div class="post-header">
-                    <div class="profile-pic">T</div>
-                    <div class="post-info">
-                        <div class="post-author">Trần Văn C</div>
-                        <div class="post-meta">
-                            <span>2 ngày trước</span>
-                            <span class="post-category">• Ngôn ngữ học</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    <p>Bạn có biết tiếng Việt thuộc nhóm ngôn ngữ nào không? Tiếng Việt thuộc họ ngôn ngữ Nam Á, nhóm Việt-Mường...</p>
-                    <p>Tiếng Việt có 6 thanh điệu: ngang, huyền, hỏi, ngã, sắc và nặng. Đây là một đặc điểm quan trọng tạo nên sự phong phú của ngôn ngữ...</p>
-                </div>
-                <img src="/api/placeholder/600/300" alt="placeholder" class="post-image">
-                <div class="post-actions-buttons">
-                    <button class="action-button">
-                        <span class="icon">♡</span>
-                        <span class="action-text">54</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">💬</span>
-                        <span class="action-text">31</span>
-                    </button>
-                    <button class="action-button">
-                        <span class="icon">↪</span>
-                    </button>
-                </div>
-            </div>
-        </div>
         
         <!-- Right Sidebar -->
         <div class="right-sidebar">
@@ -276,3 +189,5 @@
     </div>
 </body>
 </html>
+
+<script src="assets/js/getTimeLine.js"></script>
