@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduShare - Chia sẻ kiến thức học tập</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     
@@ -125,6 +125,20 @@
             
             <!-- Posts -->
             <div id="timeline-container"></div>
+
+
+            <!-- Modal chia sẻ -->
+     <div id="sharePostModal" class="modal" style="display:none;">
+        <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Chia sẻ bài viết</h3>
+        <div id="share-post-preview"></div> 
+        <textarea id="share-caption" placeholder="Thêm cảm nghĩ của bạn..." rows="3" style="width: 100%;"></textarea>
+        <button id="confirm-share" style="margin-top: 10px;">Chia sẻ</button>
+  </div>
+</div>
+
+
                
             
             
@@ -191,3 +205,4 @@
 </html>
 
 <script src="assets/js/getTimeLine.js"></script>
+<script src="assets/js/sharePost.js"></script>

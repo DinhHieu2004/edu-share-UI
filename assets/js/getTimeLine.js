@@ -37,7 +37,7 @@ $(document).ready(function () {
                                 ${share.caption ? `<p>${share.caption}</p>` : ''}
 
 
-                                ${renderPost(share.post, originalPostTime, true)}
+                                ${renderPost(share.post, originalPostTime, true, type)}
 
                             </div>
                             <div class="post-actions-buttons">
@@ -49,9 +49,11 @@ $(document).ready(function () {
                                     <span class="icon">💬</span>
                                     <span class="action-text">0</span>
                                 </button>
-                                <button class="action-button">
-                                    <span class="icon">↪</span>
-                                </button>
+                                <button class="action-button btn-share" 
+                                    data-type="${type}" 
+                                    data-post='${JSON.stringify(type === "SHARE" ? share.post : post)}'>
+                                <span class="icon">↪</span>
+                            </button>
                             </div>
                         </div>
                         `;
@@ -67,7 +69,10 @@ $(document).ready(function () {
         }
     });
 
-    function renderPost(postData, displayTime, hideActions) {
+    
+});
+
+function renderPost(postData, displayTime, hideActions,type) {
         const authorName = postData.author?.userName || 'Ẩn danh';
         const profilePicLetter = authorName.charAt(0).toUpperCase();
         const postContent = postData.content || '';
@@ -102,7 +107,9 @@ $(document).ready(function () {
                         <span class="icon">💬</span>
                         <span class="action-text">0</span>
                     </button>
-                    <button class="action-button">
+                   <button class="action-button btn-share" 
+                            data-type="${type}" 
+                            data-post='${JSON.stringify(postData)}'>
                         <span class="icon">↪</span>
                     </button>
                 </div>
@@ -112,4 +119,4 @@ $(document).ready(function () {
         html += `</div>`;
         return html;
     }
-});
+
