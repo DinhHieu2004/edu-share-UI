@@ -1,7 +1,7 @@
 let selectedPost = null;
 let selectedType = null;
 
-const token ="eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkaW5oSGlldS5jb20iLCJzdWIiOiJhZG1pbiIsImV4cCI6MTc0NzgxMjg3MCwiaWF0IjoxNzQ3NDUyODcwLCJqdGkiOiI2NzBlYzkyMi0yNTNiLTRjY2QtOWQ4OC0zYjIwNWI1NTEyYTYiLCJzY29wZSI6IlJPTEVfQURNSU4gQVBQUk9WRV9UT1BJQyBDUkVBVEVfUE9TVCBERUxFVEVfQ09NTUVOVCBERUxFVEVfUE9TVCJ9.Jv7iO-yujRJE-Z2ZCGgUZguCuF8o27lANmNHHMEx5JOGhEaXvzHXHfbLhGg2lUNnd8aUwaNHKAIHY8PXE1jGRw"
+const token ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInNjb3BlIjoiUk9MRV9BRE1JTiBERUxFVEVfUE9TVCBERUxFVEVfQ09NTUVOVCBBUFBST1ZFX1RPUElDIENSRUFURV9QT1NUIiwiaXNzIjoiZGluaEhpZXUuY29tIiwiZXhwIjoxNzQ4MTc5MzcxLCJpYXQiOjE3NDc4MTkzNzEsImp0aSI6ImMxMWNkNmU2LTQ3NDItNDg1ZC04NTE2LTFkNDY0M2JjOWM4MyJ9.uDX5vtGvw_5kRe8EgRuzJOwCcsEYkUXlNl1ntzr8QIA9kgRB7e_WBtlCOnrfNx8dNJmEqReQjAle2qgPgVK9jw"
 
 $(document).on('click', '.btn-share', function () {
     selectedType = $(this).data('type');
@@ -36,7 +36,7 @@ $('#confirm-share').on('click', function () {
 
 
     $.ajax({
-        url: 'http://localhost:8080/share-edu/postShare',
+        url: 'http://localhost:8081/share-edu/postShare',
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(payload),
