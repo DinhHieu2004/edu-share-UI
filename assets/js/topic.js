@@ -3,7 +3,7 @@ const token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInNjb3BlIjoiUk9MRV9BRE1J
 $(document).ready(function () {
     function loadPendingTopics() {
         $.ajax({
-            url: 'http://localhost:8080/share-edu/topics/pending',  // <-- CHỈNH LẠI THÀNH LOCALHOST
+            url: `${CONFIG.BASE_API}/topics/pending`,  // <-- CHỈNH LẠI THÀNH LOCALHOST
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`

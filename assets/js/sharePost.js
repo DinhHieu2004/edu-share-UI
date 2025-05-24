@@ -69,7 +69,7 @@ $('#confirm-share').on('click', function () {
 
         //8.1.14 POST request to https://udcskt.up.railway.app/share-edu/postShare (→ 8.1.15 @PostMapping createPostShare)
 
-        url: 'http://localhost:8080/share-edu/postShare',
+        url: `${CONFIG.BASE_API}/postShare`,
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(payload),
