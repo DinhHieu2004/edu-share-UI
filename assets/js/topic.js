@@ -37,7 +37,7 @@ $(document).ready(function () {
         const topicId = $(this).data('id');
         $.ajax({
             <!-- 16.1.1.1. gọi Ajax PUT /share-edu/topics/{id}/approve -->
-            url: `http://udcskt.up.railway.app/share-edu/topics/${topicId}/approve`,
+            url: `${CONFIG.BASE_API}/topics/${topicId}/approve`,
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -63,7 +63,7 @@ $(document).ready(function () {
     $(document).on('click', '.reject-btn', function () {
         const topicId = $(this).data('id');
         $.ajax({
-            url: `http://udcskt.up.railway.app/share-edu/topics/${topicId}/reject`,
+            url: `${CONFIG.BASE_API}/topics/${topicId}/reject`,
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
