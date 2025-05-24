@@ -16,7 +16,6 @@
             <a href="#" class="active" data-tab="topics">Chủ đề</a>
             <a href="#" data-tab="posts">Bài viết</a>
             <a href="#" data-tab="users">Người dùng</a>
-            <!-- Bạn có thể thêm tab khác ở đây -->
         </nav>
     </aside>
 
@@ -34,7 +33,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <!-- Dữ liệu đổ từ JS -->
+                <!-- 16.1.1.0 Người dùng nhấn nút "Duyệt" trên topic muốn duyệt (hiển thị thông qua Ajax) -->
+                <!-- 16.1.1.1. gọi Ajax PUT /share-edu/topics/{id}/approve -->
                 </tbody>
             </table>
         </section>
@@ -50,22 +50,20 @@
 </div>
 
 <script>
-    // Chuyển tab sidebar
     $(function() {
         $('.sidebar nav a').click(function(e) {
             e.preventDefault();
             const tab = $(this).data('tab');
 
-            // active link
             $('.sidebar nav a').removeClass('active');
             $(this).addClass('active');
 
-            // show tab content
             $('.tab-content').hide();
             $('#' + tab).show();
         });
     });
 </script>
+<script src="assets/js/config.js"></script>
 <script src="assets/js/topic.js"></script>
 </body>
 </html>

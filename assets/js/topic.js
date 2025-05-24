@@ -32,29 +32,38 @@ $(document).ready(function () {
             }
         });
     }
-
+    <!-- 16.1.1.0 Người dùng nhấn nút "Duyệt" trên topic muốn duyệt (hiển thị thông qua Ajax) -->
     $(document).on('click', '.approve-btn', function () {
         const topicId = $(this).data('id');
         $.ajax({
-            url: `http://localhost:8080/share-edu/topics/${topicId}/approve`,
+            <!-- 16.1.1.1. gọi Ajax PUT /share-edu/topics/{id}/approve -->
+            url: `${CONFIG.BASE_API}/topics/${topicId}/approve`,
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
             },
             success: function () {
+                // 16.1.1.14: Hiển thị thông tin chủ đề đã duyệt từ response
                 alert("Chủ đề đã được duyệt!");
+                // 16.1.1.13: Reload lại danh sách chờ duyệt
                 loadPendingTopics();
             },
-            error: function () {
-                alert("Duyệt thất bại.");
+            error: function (xhr) {
+                let msg = "Duyệt thất bại.";
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    // 16.2.3, 16.2.6, 16.2.9 Hiển thị lỗi
+                    msg = xhr.responseJSON.message;
+                }
+                alert(msg);
             }
+
         });
     });
 
     $(document).on('click', '.reject-btn', function () {
         const topicId = $(this).data('id');
         $.ajax({
-            url: `http://localhost:8080/share-edu/topics/${topicId}/reject`,
+            url: `${CONFIG.BASE_API}/topics/${topicId}/reject`,
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -63,9 +72,15 @@ $(document).ready(function () {
                 alert("Chủ đề đã bị từ chối.");
                 loadPendingTopics();
             },
-            error: function () {
-                alert("Từ chối thất bại.");
+            error: function (xhr) {
+                let msg = "Từ chối thất bại.";
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                    // 16.2.2.2 Hiển thị lỗi
+                    msg = xhr.responseJSON.message;
+                }
+                alert(msg);
             }
+
         });
     });
 
