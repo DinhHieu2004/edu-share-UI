@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard - Chủ đề</title>
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" role="navigation" aria-label="Menu điều hướng chính">
+        <h2>Admin Panel</h2>
+        <nav>
+            <a href="#" class="active" data-tab="topics">Chủ đề</a>
+            <a href="#" data-tab="posts">Bài viết</a>
+            <a href="#" data-tab="users">Người dùng</a>
+            <!-- Bạn có thể thêm tab khác ở đây -->
+        </nav>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <main class="main-content" role="main">
+        <section id="topics" class="tab-content active">
+            <h1>Danh sách chủ đề chờ duyệt</h1>
+            <table id="topic-table" aria-describedby="Danh sách chủ đề chờ duyệt">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên chủ đề</th>
+                    <th>Mô tả</th>
+                    <th>Hành động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Dữ liệu đổ từ JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="posts" class="tab-content" style="display:none;">
+            <h1>Quản lý bài viết</h1>
+        </section>
+
+        <section id="users" class="tab-content" style="display:none;">
+            <h1>Quản lý người dùng</h1>
+        </section>
+    </main>
+</div>
+
+<script>
+    // Chuyển tab sidebar
+    $(function() {
+        $('.sidebar nav a').click(function(e) {
+            e.preventDefault();
+            const tab = $(this).data('tab');
+
+            // active link
+            $('.sidebar nav a').removeClass('active');
+            $(this).addClass('active');
+
+            // show tab content
+            $('.tab-content').hide();
+            $('#' + tab).show();
+        });
+    });
+</script>
+<script src="assets/js/topic.js"></script>
+</body>
+</html>
