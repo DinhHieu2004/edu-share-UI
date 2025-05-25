@@ -11,6 +11,7 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
+ // 4.1.1: User click create post button
     $('.post-button').click(function() {
         const content = $('.post-input').val().trim();
         if (!content) {
@@ -36,6 +37,7 @@ $(document).ready(function() {
             topics: selectedTopicIds
         };
 
+           // 4.1.2: POST /createPost request
         $.ajax({
             url: 'http://localhost:8081/share-edu/post',
             method: 'POST',
