@@ -72,6 +72,9 @@ $(document).ready(function () {
         headers: {
             'Authorization': `Bearer ${utoken}`
         },
+
+        // 15.1.1.11: Hiển thị Tạo Người dùng thành công.
+
         success: function (res) {
             alert('Thêm người dùng thành công!');
             $('#add-user-form')[0].reset();
@@ -80,7 +83,7 @@ $(document).ready(function () {
         },
         error: function (err) {
             console.error('Lỗi khi thêm người dùng:', err);
-
+            // 15.1.2.3: AdminDashboardUI hiển thị thông báo “Người dùng đã tồn tại” hoặc các lỗi khác bắt được
             // Lấy thông báo lỗi từ response JSON, nếu có
             const message = err.responseJSON && err.responseJSON.message 
                             ? err.responseJSON.message 
