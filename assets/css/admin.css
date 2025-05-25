@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;  /* nền trắng */
+    color: #222222;       /* chữ đen tối */
+}
+
+/* Container chính: sidebar + nội dung */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar bên trái - nền trắng */
+.sidebar {
+    width: 220px;
+    background-color: #ffffff; /* trắng */
+    color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #222222;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 10px;
+}
+
+.sidebar nav a {
+    color: #555555;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background-color: #e0e7ff; /* nền xanh nhẹ khi active/hover */
+    color: #1d4ed8; /* chữ xanh đậm */
+    border-color: #a5b4fc;
+}
+
+/* Nội dung chính bên phải - nền trắng */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #ffffff; /* nền trắng */
+    color: #222222;
+}
+
+.main-content h1 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #222222;
+}
+
+/* Bảng topic trên nền trắng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #222222;
+}
+
+thead {
+    /* Bỏ nền xanh */
+    color: #222222;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+}
+
+th, td {
+    padding: 14px 20px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e1e8ed;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #e8f4fd; /* màu hover nhẹ */
+}
+
+button.approve-btn,
+button.reject-btn {
+    cursor: pointer;
+    padding: 8px 14px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.approve-btn {
+    background-color: #27ae60;
+}
+
+button.approve-btn:hover {
+    background-color: #1e8449;
+}
+
+button.reject-btn {
+    background-color: #c0392b;
+}
+
+button.reject-btn:hover {
+    background-color: #922b21;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        padding: 10px 0;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+    .sidebar nav {
+        flex-direction: row;
+        gap: 8px;
+        padding-left: 10px;
+    }
+    .sidebar nav a {
+        padding: 10px 15px;
+        white-space: nowrap;
+    }
+    .main-content {
+        padding: 20px 15px;
+    }
+    table, thead, tbody, th, td, tr {
+        font-size: 14px;
+    }
+}

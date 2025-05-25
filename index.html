@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduShare - Chia sẻ kiến thức học tập</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/likePost.css">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
     
 </head>
 <body>
-    <!-- Header -->
+
     <header>
         <div class="header-container">
             <a href="#" class="logo">EduShare</a>
@@ -28,7 +27,7 @@
     </header>
     
     <div class="container">
-        <!-- Left Sidebar -->
+
         <div class="left-sidebar">
             <div class="category-nav">
                 <div class="nav-title">Chủ đề học tập</div>
@@ -91,9 +90,8 @@
             </div>
         </div>
         
-        <!-- Main Content -->
         <div class="main-content">
-            <!-- Topic Filters -->
+
             <div class="topic-filters">
                 <div class="topic-filter active">Tất cả</div>
                 <div class="topic-filter">Khoa học tự nhiên</div>
@@ -104,14 +102,12 @@
                 <div class="topic-filter">Ngôn ngữ học</div>
             </div>
             
-            <!-- Create Post -->
             <div class="create-post">
                 <div class="create-post-header">
                     <div class="profile-pic">T</div>
                     <div class="create-post-input">Chia sẻ kiến thức của bạn...</div>
                 </div>
                 
-                <!-- Would be expanded via JavaScript -->
                 <div class="expanded-post">
                     <textarea class="post-input" placeholder="Chia sẻ kiến thức của bạn..."></textarea>
                     <div class="post-categories">
@@ -126,27 +122,22 @@
                 </div>
             </div>
             
-            <!-- Posts -->
+            <!-- timeline -->
             <div id="timeline-container"></div>
 
+            <!-- Modal sharePost -->
+            <div id="sharePostModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>Chia sẻ bài viết</h3>
+                <div id="share-post-preview"></div> 
+                <textarea id="share-caption" placeholder="Thêm cảm nghĩ của bạn..." rows="3" style="width: 100%;"></textarea>
+                <button id="confirm-share" style="margin-top: 10px;">Chia sẻ</button>
+             </div>
+        </div>
 
-            <!-- Modal chia sẻ -->
-     <div id="sharePostModal" class="modal" style="display:none;">
-        <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h3>Chia sẻ bài viết</h3>
-        <div id="share-post-preview"></div> 
-        <textarea id="share-caption" placeholder="Thêm cảm nghĩ của bạn..." rows="3" style="width: 100%;"></textarea>
-        <button id="confirm-share" style="margin-top: 10px;">Chia sẻ</button>
-  </div>
-</div>
-
-
-               
-            
-            
-        
-        <!-- Right Sidebar -->
+    </div>
+      <!-- Right Sidebar -->
         <div class="right-sidebar">
             <!-- Trending Topics -->
             <div class="trending-topics">
@@ -174,41 +165,13 @@
                 </div>
             </div>
             
-            <!-- Suggested Users 
-            <div class="suggested-users">
-                <div class="sidebar-title">Người dùng gợi ý</div>
-                <div class="suggested-user">
-                    <div class="user-icon">P</div>
-                    <div class="user-name">
-                        <div class="user-fullname">Phạm Văn D</div>
-                        <div class="user-role">Vật lý lượng tử</div>
-                    </div>
-                    <button class="follow-button">Theo dõi</button>
-                </div>
-                <div class="suggested-user">
-                    <div class="user-icon">L</div>
-                    <div class="user-name">
-                        <div class="user-fullname">Lê Thị E</div>
-                        <div class="user-role">Hóa học hữu cơ</div>
-                    </div>
-                    <button class="follow-button">Theo dõi</button>
-                </div>
-                <div class="suggested-user">
-                    <div class="user-icon">V</div>
-                    <div class="user-name">
-                        <div class="user-fullname">Vũ Đình F</div>
-                        <div class="user-role">Lịch sử Việt Nam</div>
-                    </div>
-                    <button class="follow-button">Theo dõi</button>
-                </div>
-            </div>  -->
         </div>
     </div>
+
 </body>
 </html>
 
 <script src="assets/js/getTimeLine.js"></script>
 <script src="assets/js/sharePost.js"></script>
-
 <script src="assets/js/createPost.js"></script>
-
+<script src="assets/js/config.js"></script>

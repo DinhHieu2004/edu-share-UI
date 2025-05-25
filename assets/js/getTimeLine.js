@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $.ajax({
-        url: 'http://localhost:8081/share-edu/timeline',
+        url: `${CONFIG.BASE_API}/timeline`,
+        
         method: 'GET',
         success: function (response) {
             if (response.code === 1000) {

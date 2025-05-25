@@ -39,7 +39,7 @@ $(document).ready(function() {
 
            // 4.1.2: POST /createPost request
         $.ajax({
-            url: 'http://localhost:8081/share-edu/post',
+            url: `${CONFIG.BASE_API}/post`,
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(postData),
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 function loadTopics() {
     $.ajax({
-        url: 'http://localhost:8081/share-edu/topics',
+        url: `${CONFIG.BASE_API}/topics`,
         method: 'GET',
         success: function(response) {
             if (response.code === 1000) {
