@@ -3,7 +3,7 @@ const token = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInNjb3BlIjoiUk9MRV9BRE1J
 $(document).ready(function () {
     function loadPendingTopics() {
         $.ajax({
-            url: `${CONFIG.BASE_API}/topics/pending`,  // <-- CHỈNH LẠI THÀNH LOCALHOST
+            url: `${CONFIG.BASE_API}/topics/pending`,
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -43,18 +43,20 @@ $(document).ready(function () {
                 'Authorization': `Bearer ${token}`
             },
             success: function () {
-                // 16.1.1.14: Hiển thị thông tin chủ đề đã duyệt từ response
+                // 16.1.1.14: Thông báo thành công
                 alert("Chủ đề đã được duyệt!");
-                // 16.1.1.13: Reload lại danh sách chờ duyệt
+                // 16.1.1.15 load lại danh sách chờ duyệt
                 loadPendingTopics();
             },
             error: function (xhr) {
                 let msg = "Duyệt thất bại.";
                 if (xhr.responseJSON && xhr.responseJSON.message) {
-                    // 16.2.3, 16.2.6, 16.2.9 Hiển thị lỗi
+                    // 16.2.3, 16.2.7, 16.2.11 Hiển thị lỗi
                     msg = xhr.responseJSON.message;
                 }
                 alert(msg);
+                // 16.2.4 16.2.8, 16.2.12 Ajax load lại danh sách chờ duyệt
+                loadPendingTopics();
             }
 
         });
@@ -75,7 +77,6 @@ $(document).ready(function () {
             error: function (xhr) {
                 let msg = "Từ chối thất bại.";
                 if (xhr.responseJSON && xhr.responseJSON.message) {
-                    // 16.2.2.2 Hiển thị lỗi
                     msg = xhr.responseJSON.message;
                 }
                 alert(msg);
