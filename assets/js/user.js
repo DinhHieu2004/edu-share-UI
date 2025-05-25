@@ -2,7 +2,7 @@ let utoken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0cnVuZ2RvbmdsZSIsInNjb3BlIjoiIiwia
 $(document).ready(function () {
     function loadUsers() {
         $.ajax({
-            url: `${CONFIG.localhost}/users`, 
+            url: `${CONFIG.BASE_API}/users`, 
             method: 'GET',
             dataType: 'json',
             headers: {
@@ -65,7 +65,7 @@ $(document).ready(function () {
     };
 
     $.ajax({
-        url: `${CONFIG.localhost}/users`,
+        url: `${CONFIG.BASE_API}/users`,
         method: 'POST',
         contentType: 'application/json',
         data: JSON.stringify(newUser),
