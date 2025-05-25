@@ -45,6 +45,64 @@
 
         <section id="users" class="tab-content" style="display:none;">
             <h1>Quản lý người dùng</h1>
+
+            <button id="openAddUserModal" style="margin-bottom: 16px; background-color: #9bb39f; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px;">
+                + Thêm người dùng
+            </button>
+
+            <!-- Modal thêm người dùng -->
+            <div id="addUserModal" style="display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);">
+                <div style="background: white; margin: 10% auto; padding: 20px; width: 400px; border-radius: 8px; position: relative;">
+                    <span class="close" style="position: absolute; right: 10px; top: 10px; font-size: 24px; font-weight: bold; cursor: pointer;">&times;</span>
+                    <h2>Thêm người dùng mới</h2>
+                    <form id="add-user-form">
+                        <div id="form-error" style="color: red; margin-bottom: 10px; display: none;"></div>
+
+                        <label style="display: block; margin-bottom: 10px;">
+                            Tên tài khoản:
+                            <input type="text" id="username" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            Họ:
+                            <input type="text" id="lastname" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            Tên:
+                            <input type="text" id="firstname" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            Ngày sinh:
+                            <input type="date" id="birthdate" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            Email:
+                            <input type="email" id="email" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <label style="display: block; margin-bottom: 10px;">
+                            Mật khẩu:
+                            <input type="password" id="password" required style="width: 100%; padding: 6px;" />
+                        </label>
+                        <button type="submit" style="padding: 8px 16px; background: #007bff; color: white; border: none; border-radius: 4px;">Thêm</button>
+                    </form>
+                </div>
+            </div>
+
+            <table id="user-table" aria-describedby="Danh sách Người dùng">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên tài khoản</th>
+                    <th>Họ</th>
+                    <th>Tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Email</th>
+                    <th>Hành động</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
         </section>
     </main>
 </div>
@@ -65,5 +123,6 @@
 </script>
 <script src="assets/js/config.js"></script>
 <script src="assets/js/topic.js"></script>
+<script src="assets/js/user.js"></script>
 </body>
 </html>
