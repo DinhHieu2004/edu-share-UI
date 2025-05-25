@@ -49,7 +49,7 @@ $(document).ready(function() {
 
         // 4.1.9 [send] Initiate AJAX request
         $.ajax({
-            url: 'http://localhost:8081/share-edu/post',
+            url: `${CONFIG.BASE_API}/post`,
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(postData),
@@ -93,7 +93,7 @@ $(document).ready(function() {
 // Load topics (not part of the createPost sequence diagram)
 function loadTopics() {
     $.ajax({
-        url: 'http://localhost:8081/share-edu/topics',
+        url: `${CONFIG.BASE_API}/topics`,
         method: 'GET',
         success: function(response) {
             if (response.code === 1000) {
