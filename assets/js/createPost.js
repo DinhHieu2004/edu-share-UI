@@ -122,7 +122,7 @@ function showNotification(message) {
     $('body').append(notification);
     
     notification.fadeIn().delay(3000).fadeOut(function() {
-        $(this).remove());
+        $(this).remove();
     });
 }
 
